@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavLayout from "./layout-route/NavLayout";
 import Home from "./pages/Home";
@@ -14,7 +13,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="category" element={<Category />} />
           </Route>
-          <Route path="/quiz/:category/:difficulty" element={<Quiz />} />
+          <Route path="/quiz/:category/:difficulty/:username" element={<Quiz />} />
         </Routes>
       </Router>
     </>

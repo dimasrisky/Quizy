@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import QuizStarted from '../components/QuizStarted'
 import QuizFinished from "../components/QuizFinished"
 import { useParams } from 'react-router-dom'
 
 const Quiz = () => {
-  const { category, difficulty } = useParams()
+  const { category, difficulty, username } = useParams()
   const [ correctPoint, setCorrectPoint ] = useState(0)
   const [ incorrectPoint, setIncorrectPoint] = useState(0)
   const [ state, setState ] = useState("playQuiz")
@@ -21,12 +21,12 @@ const Quiz = () => {
       }
     }
     getData()
-  }, [])
+  }, [category, difficulty])
   
   return (
     <>
       { state === "playQuiz" && <QuizStarted dataQuiz={fetchData} setCorrectPoint={setCorrectPoint} setIncorrectPoint={setIncorrectPoint} setState={setState} />}
-      { state === "endQuiz" && <QuizFinished correctPoint={correctPoint} incorrectPoint={incorrectPoint} />}
+      { state === "endQuiz" && <QuizFinished correctPoint={correctPoint} incorrectPoint={incorrectPoint} username={username} />}
     </>
   )
 }
