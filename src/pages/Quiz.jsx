@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import QuizStarted from '../components/QuizStarted'
 import QuizFinished from "../components/QuizFinished"
+import Loading from '../components/Loading'
 import { useParams } from 'react-router-dom'
 
 const Quiz = () => {
@@ -8,7 +9,7 @@ const Quiz = () => {
   const [ correctPoint, setCorrectPoint ] = useState(0)
   const [ incorrectPoint, setIncorrectPoint] = useState(0)
   const [ state, setState ] = useState("playQuiz")
-  const [fetchData, setFetchData] = useState([])
+  const [fetchData, setFetchData] = useState()
   
   useEffect(() => {
     const getData = async () => {
@@ -25,8 +26,11 @@ const Quiz = () => {
   
   return (
     <>
-      { state === "playQuiz" && <QuizStarted dataQuiz={fetchData} setCorrectPoint={setCorrectPoint} setIncorrectPoint={setIncorrectPoint} setState={setState} />}
-      { state === "endQuiz" && <QuizFinished correctPoint={correctPoint} incorrectPoint={incorrectPoint} username={username} />}
+      {fetchData? (
+        state === "playQuiz"? (
+           <QuizStarted dataQuiz={fetchData} setCorrectPoint={setCorrectPoint} setIncorrectPoint={setIncorrectPoint} setState={setState} />
+        ) :  <QuizFinished correctPoint={correctPoint} incorrectPoint={incorrectPoint} username={username} />
+      ) : <Loading />}
     </>
   )
 }

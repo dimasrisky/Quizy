@@ -18,9 +18,9 @@ const QuizStarted = ({ dataQuiz, setCorrectPoint, setIncorrectPoint, setState })
   
   return (
     <>
-      <div className='h-[100vh] bg-[url(/img/bg-primary.jpg)] bg-no-repeat bg-cover bg-center text-white pt-[20vh] text-center'>
+      <div className='h-screen w-screen flex justify-center items-center bg-[url(/img/bg-primary.jpg)] bg-no-repeat bg-cover bg-center text-white pt-[20vh] text-center'>
         <div className='flex flex-col items-center w-[80%] mx-auto'>
-          <h1 className='font-lilita text-[1.5rem] mb-6'>{decodedQuestion}</h1>
+          <h1 className='font-lilita text-[1.2rem] lg:text-[1.5rem] mb-6'>{decodedQuestion}</h1>
           <div className='flex flex-col items-center gap-5 w-full'>
             {newAnswers?.map(eachAnswers => <Choice key={eachAnswers} answer={he.decode(eachAnswers, {'isAttributeValue' : false})} click={handleChoice} />)}
           </div>
