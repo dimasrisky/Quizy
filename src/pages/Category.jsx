@@ -30,7 +30,7 @@ const Category = () => {
                     {/* Category Input */}
                     <div className='flex flex-col mt-6 gap-3'>
                         <label htmlFor="category" className='text-xs'>Select Category :</label>
-                        <select onChange={handleCategory} name="category" id="category" className='bg-transparent border-[0.1rem] border-solid border-white text-xs pl-2 py-2 rounded-lg focus:outline-white'>
+                        <select onChange={handleCategory} name="category" id="category" className='bg-transparent border-[0.1rem] border-solid border-white text-xs px-2 py-2 rounded-lg focus:outline-white'>
                             {dataCategory?.map(eachCategory => <option value={eachCategory.id} key={eachCategory.id} className='text-black'>{eachCategory.category}</option>)}
                         </select>
                     </div>

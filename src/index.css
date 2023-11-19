@@ -107,3 +107,11 @@ meter {
 ::-webkit-details-marker {
     display: none;
 }
+
+select {
+  /* Untuk browser WebKit (Safari, Chrome, dll.) */
+  -webkit-appearance: menulist; /* Menampilkan tanda panah pada browser WebKit */
+
+  /* Untuk browser lainnya seperti Firefox */
+  appearance: menulist; /* Menampilkan tanda panah pada browser yang mendukung properti appearance */
+}
