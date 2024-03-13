@@ -19,7 +19,7 @@ const Category = () => {
                 <h1 className='hidden md:flex font-lilita text-[60px]'>Fill out the <br /> form to start <br /> the quiz!</h1>
                 <span className='hidden md:flex w-[2px] h-[23rem] border border-white border-solid'></span>
                 {/* Form */}
-                <div className='border-4 w-[451px] h-[500px] border-white px-[3rem] pt-[3rem] bg-[#6d6d6d39]'>
+                <div className='border-2 w-[451px] border-white px-[3rem] pt-[3rem] bg-[#6d6d6d39]'>
                     <img src="img/quizy-logo.png" className='mx-auto mb-[1.5rem]' width={'200px'}/>
                     {/* Username Input */}
                     <div className='flex flex-col '>
@@ -43,7 +43,7 @@ const Category = () => {
                         </select>
                     </div>
                     {/* Submit button */}
-                    <div className='flex items-center w-full text-black justify-center gap-1 py-8'>
+                    <div className='flex items-center w-full text-black justify-center gap-1 my-8'>
                         <Link to={`/quiz/${category}/${difficulty}/${username}`} className='grow bg-white py-2 rounded-md text-xs text-center hover:bg-slate-300'>Start the quiz</Link>
                         <button type='reset' className='bg-white py-2 px-5 rounded-md text-xs hover:bg-slate-300'>Clear</button>
                     </div>
