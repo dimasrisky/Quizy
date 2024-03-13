@@ -6,7 +6,6 @@ const Category = () => {
     const [username, setUsername] = useState("bro");
     const [category, setCategory] = useState(9);
     const [difficulty, setDifficulty] = useState("easy");
-
     const handleUsername = event  => setUsername( event.target.value )
     const handleCategory = event  => setCategory( event.target.value )
     const handleDifficulty = event  => setDifficulty( event.target.value )

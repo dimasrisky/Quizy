@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
-import QuizStarted from '../components/QuizStarted'
-import QuizFinished from "../components/QuizFinished"
-import Loading from '../components/Loading'
+import { QuizFinished, QuizStarted, Loading } from '../components/Components'
 import { useParams } from 'react-router-dom'
 
 const Quiz = () => {
@@ -18,7 +16,7 @@ const Quiz = () => {
         const data = await response.json();
         setFetchData(data.results)
       } catch (error) {
-        console.log("Error bang");
+        console.log(err);
       }
     }
     getData()

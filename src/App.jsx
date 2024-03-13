@@ -1,12 +1,6 @@
-import { 
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
- } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NavLayout from "./layout-route/NavLayout";
-import Home from "./pages/Home";
-import Category from "./pages/Category";
-import Quiz from "./pages/Quiz";
+import { Home, Category, Quiz } from "./pages/Pages"
 
 
 // Router
