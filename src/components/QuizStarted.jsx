@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Choice from './Choice'
-import PropTypes from 'prop-types';
 import he from 'he'
 
 const QuizStarted = ({ dataQuiz, setCorrectPoint, setIncorrectPoint, setState }) => {
@@ -28,12 +27,6 @@ const QuizStarted = ({ dataQuiz, setCorrectPoint, setIncorrectPoint, setState })
       </div>
     </>
   )
-}
-QuizStarted.propTypes = {
-  dataQuiz: PropTypes.array.isRequired,
-  setCorrectPoint: PropTypes.func.isRequired,
-  setIncorrectPoint: PropTypes.func.isRequired,
-  setState: PropTypes.func.isRequired
 }
 
 
