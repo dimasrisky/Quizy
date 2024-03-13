@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import QuizStarted from '../components/QuizStarted'
-import QuizFinished from "../components/QuizFinished"
+import { QuizFinished, QuizStarted, Loading } from '../components/Components'
 import { useParams } from 'react-router-dom'
 
 const Quiz = () => {
@@ -8,7 +7,7 @@ const Quiz = () => {
   const [ correctPoint, setCorrectPoint ] = useState(0)
   const [ incorrectPoint, setIncorrectPoint] = useState(0)
   const [ state, setState ] = useState("playQuiz")
-  const [fetchData, setFetchData] = useState([])
+  const [fetchData, setFetchData] = useState()
   
   useEffect(() => {
     const getData = async () => {
@@ -17,7 +16,7 @@ const Quiz = () => {
         const data = await response.json();
         setFetchData(data.results)
       } catch (error) {
-        console.log("Error bang");
+        console.log(err);
       }
     }
     getData()
@@ -25,8 +24,11 @@ const Quiz = () => {
   
   return (
     <>
-      { state === "playQuiz" && <QuizStarted dataQuiz={fetchData} setCorrectPoint={setCorrectPoint} setIncorrectPoint={setIncorrectPoint} setState={setState} />}
-      { state === "endQuiz" && <QuizFinished correctPoint={correctPoint} incorrectPoint={incorrectPoint} username={username} />}
+      {fetchData? (
+        state === "playQuiz"? (
+           <QuizStarted dataQuiz={fetchData} setCorrectPoint={setCorrectPoint} setIncorrectPoint={setIncorrectPoint} setState={setState} />
+        ) :  <QuizFinished correctPoint={correctPoint} incorrectPoint={incorrectPoint} username={username} />
+      ) : <Loading />}
     </>
   )
 }

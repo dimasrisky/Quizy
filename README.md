@@ -34,7 +34,7 @@ Selamat datang di Quizy, sebuah aplikasi web sederhana untuk membuat dan menjala
 1. Jalankan aplikasi dalam mode pengembangan:
 
    ```bash
-   npm run dev
+   npm run start:dev
    ```
 
 2. Buka link yang anda dapat setelah menjalankan perintah diatas seperti contoh [http://localhost:3000](http://localhost:3000) di browser Anda.

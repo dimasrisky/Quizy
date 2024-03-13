@@ -4,23 +4,23 @@ import PropTypes from 'prop-types'
 const QuizFinished = ({ correctPoint, incorrectPoint, username }) => {
   return (
     <>
-        <div className='h-[100vh] bg-[url(/img/bg-primary.jpg)] bg-no-repeat bg-cover bg-center pt-[7rem]'>
-            <div className='w-[80%] flex justify-between items-center mx-auto text-white'>
-                <img src={`/img/${correctPoint >= (incorrectPoint + correctPoint) / 2 ? 'win.png' : 'lose.png'}`} className='w-[40%] mix-blend-screen' />
-                <span className='h-[15rem] border border-white'></span>
-                <div className='flex flex-col gap-4'>
+        <div className='h-screen w-screen flex justify-center items-center bg-[url(/img/bg-primary.jpg)] bg-no-repeat bg-cover bg-center overflow-hidden'>
+            <div className='w-[85%] md:w-[80%] flex flex-col md:flex-row justify-between items-center mx-auto text-white md:gap-[4rem]'>
+                <img src={`/img/${correctPoint >= (incorrectPoint + correctPoint) / 2 ? 'win.png' : 'lose.png'}`} className='mix-blend-screen w-[15rem] md:w-[40%]' />
+                <span className='h-[70vh] hidden md:flex border border-white border-solid'></span>
+                <div className='flex w-full flex-col gap-4'>
                     <div>
-                        <h1 className='text-[3rem] font-lilita'>{correctPoint >= (incorrectPoint + correctPoint) / 2 ? `Congrats ${username} ✨` : `Sorry ${username} 😭`}</h1>
-                        {correctPoint >= (incorrectPoint + correctPoint) / 2 ? <h3 className='font-lilita text-[1.5rem]'>You`ve answered the questions <br /> beautifully.</h3> : <h3 className='font-lilita text-[1.5rem]'>Most of your answers are <br /> incorrect. Try again next time!</h3> }
+                        <h1 className='text-[2.5rem] md:text-[3.5rem] font-lilita'>{correctPoint >= (incorrectPoint + correctPoint) / 2 ? `Congrats ${username} ✨` : `Sorry ${username} 😭`}</h1>
+                        {correctPoint >= (incorrectPoint + correctPoint) / 2 ? <h3 className='font-lilita text-[1.2rem] md:text-[1.7rem] tracking-wide leading-[1.4rem] md:leading-[2rem]'>You`ve answered the questions <br /> beautifully.</h3> : <h3 className='font-lilita text-[1.2rem] md:text-[1.7rem] tracking-wide leading-[1.4rem] md:leading-[2rem]'>Most of your answers are <br /> incorrect. Try again next time!</h3> }
                     </div>
-                    <div className='flex flex-col gap-2'>
-                        <h4>Your score :</h4>
-                        <div className='flex justify-between'>
-                            <h5>Incorrect : {incorrectPoint}</h5>
-                            <span className='border border-1 border-white h-[2rem]'></span>
-                            <h5>Correct : {correctPoint}</h5>
+                    <div className='flex flex-col font-lilita mt-[2rem]'>
+                        <h4 className='tracking-wider text-[0.9rem] md:text-[1.3rem]'>Your score :</h4>
+                        <div className='flex justify-start text-[0.8rem] md:text-[1.3rem] mt-2 gap-3'>
+                            <h5 className='tracking-wider text-[#FF4B4B]'>Incorrect : {incorrectPoint}</h5>
+                            <span className='hidden md:flex border border-1 border-white border-solid h-[2rem]'></span>
+                            <h5 className='tracking-wider text-[#25FF12]'>Correct : {correctPoint}</h5>
                         </div>
-                        <Link to={"/"} className='text-xs border border-white text-center px-8 py-3 rounded-md text-white transition-all duration-300 hover:bg-white hover:text-black'>Back To Home</Link>
+                        <Link to={"/"} className='mt-4 text-xs border border-white border-solid text-center px-8 py-3 rounded-md text-white transition-all duration-300 hover:bg-white hover:text-black'>Back To Home</Link>
                     </div>
                 </div>
             </div>
