@@ -16,7 +16,7 @@ const Quiz = () => {
         const data = await response.json();
         setFetchData(data.results)
       } catch (error) {
-        console.log(err);
+        console.log(error);
       }
     }
     getData()

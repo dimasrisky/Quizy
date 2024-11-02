@@ -13,14 +13,14 @@ const Category = () => {
 
     return (
         <>
-        <div className='w-screen h-screen flex items-center justify-center bg-[url(/img/bg-primary.jpg)] bg-no-repeat bg-cover bg-center'>
+        <div className='w-screen h-screen flex items-center justify-center bg-[url(/img/bg-primary.webp)] bg-no-repeat bg-cover bg-center'>
             <form className='w-[80%] mx-auto flex flex-row justify-between text-white items-center'>
                 {/* Title */}
                 <h1 className='hidden md:flex font-lilita text-[60px]'>Fill out the <br /> form to start <br /> the quiz!</h1>
                 <span className='hidden md:flex w-[2px] h-[23rem] border border-white border-solid'></span>
                 {/* Form */}
                 <div className='border-2 w-[451px] border-white px-[3rem] pt-[3rem] bg-[#6d6d6d39]'>
-                    <img src="img/quizy-logo.png" className='mx-auto mb-[1.5rem]' width={'200px'}/>
+                    <img src="img/quizy-logo.webp" className='mx-auto mb-[1.5rem]' width={'200px'}/>
                     {/* Username Input */}
                     <div className='flex flex-col '>
                         <label htmlFor="username" className='text-sm'>Username :</label>

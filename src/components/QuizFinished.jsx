@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 const QuizFinished = ({ correctPoint, incorrectPoint, username }) => {
   return (
     <>
-        <div className='h-screen w-screen flex justify-center items-center bg-[url(/img/bg-primary.jpg)] bg-no-repeat bg-cover bg-center overflow-hidden'>
+        <div className='h-screen w-screen flex justify-center items-center bg-[url(/img/bg-primary.webp)] bg-no-repeat bg-cover bg-center overflow-hidden'>
             <div className='w-[85%] md:w-[80%] flex flex-col md:flex-row justify-between items-center mx-auto text-white md:gap-[4rem]'>
-                <img src={`/img/${correctPoint >= (incorrectPoint + correctPoint) / 2 ? 'win.png' : 'lose.png'}`} className='mix-blend-screen w-[15rem] md:w-[40%]' />
+                <img src={`/img/${correctPoint >= (incorrectPoint + correctPoint) / 2 ? 'win.webp' : 'lose.webp'}`} className='mix-blend-screen w-[15rem] md:w-[40%]' />
                 <span className='h-[70vh] hidden md:flex border border-white border-solid'></span>
                 <div className='flex w-full flex-col gap-4'>
                     <div>
