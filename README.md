@@ -30,7 +30,7 @@
   <a href="#credits">Credits</a>
 </p>
 
-![screenshot](https://github.com/user-attachments/assets/547ce2e2-f50d-4fce-9a72-6267c66655aa)
+![screenshot](https://github.com/user-attachments/assets/8a8c1f9f-b12d-48e4-b445-936f5d0a5dc4)
 
 ## About
 Welcome to Quizy, a simple web application for creating and running quizzes. This project is built using ReactJS and Tailwind CSS.
