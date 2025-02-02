@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <a href="https://quizyy-app.vercel.app/">Live Demo</a> •
+  <a href="https://quizy-project.vercel.app/">Live Demo</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#credits">Credits</a>
